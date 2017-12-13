@@ -37,6 +37,7 @@ class SectionsDock;
 class ConsoleWidget;
 class EntrypointWidget;
 class DisassemblerGraphView;
+class JupyterWidget;
 
 class QDockWidget;
 
@@ -169,6 +170,7 @@ private:
     PseudocodeWidget *pseudocodeDock;
     QDockWidget      *graphDock;
     DisassemblerGraphView *graphView;
+    JupyterWidget    *jupyterDock;
     QDockWidget      *asmDock;
     QDockWidget      *calcDock;
     Omnibar          *omnibar;

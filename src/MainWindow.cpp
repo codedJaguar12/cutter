@@ -59,6 +59,7 @@
 #include "dialogs/OptionsDialog.h"
 #include "widgets/EntrypointWidget.h"
 #include "dialogs/SaveProjectDialog.h"
+#include "widgets/JupyterWidget.h"
 
 // graphics
 #include <QGraphicsEllipseItem>
@@ -269,6 +270,9 @@ void MainWindow::initUI()
     //Add Dashboard Dock panel
     this->dashboardDock = new Dashboard(this);
     dockWidgets.push_back(dashboardDock);
+
+    this->jupyterDock = new JupyterWidget(this);
+    dockWidgets.push_back(jupyterDock);
 
     // Set up dock widgets default layout
     resetToDefaultLayout();
@@ -699,7 +703,8 @@ void MainWindow::showDefaultDocks()
                                                 sidebarDock,
                                                 hexdumpDock,
                                                 pseudocodeDock,
-                                                dashboardDock
+                                                dashboardDock,
+                                                jupyterDock
                                               };
 
     for (auto w : dockWidgets)
